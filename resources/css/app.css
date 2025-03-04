@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary: #3098f4;
+    --secondary: #ffffff;
+    --tertiary: #000000;
+    --quaternary: #2d2b2b;
+    --quinary: #fd3c0c;
+}
