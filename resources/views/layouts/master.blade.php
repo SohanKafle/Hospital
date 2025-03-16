@@ -128,14 +128,15 @@
                     </ul>
                 </div>
 
-
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button class="text-black p-1 rounded-lg border-2 border-gray-300 hover:border-primary hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200" id="mobile-menu-button">
+                    <button
+                        class="text-black p-1 rounded-lg border-2 border-gray-300 hover:border-primary hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
+                        id="mobile-menu-button">
                         <i class="ri-menu-line text-3xl"></i>
                     </button>
                 </div>
-                
+
             </div>
         </div>
         <!-- Mobile Menu -->
@@ -143,17 +144,20 @@
             <div class="bg-secondary p-4 w-64 h-full font-medium">
                 <ul class="space-y-4">
                     <li><a href="/" class="block hover:text-primary border-b border-gray-300 pb-2">Home</a></li>
-                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">About Us</a></li>
-                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Doctors</a></li>
-                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Departments</a></li>
-                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Our Services</a></li>
-                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Contact</a></li>
+                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">About Us</a>
+                    </li>
+                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Doctors</a>
+                    </li>
+                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Departments</a>
+                    </li>
+                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Our
+                            Services</a></li>
+                    <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Contact</a>
+                    </li>
                 </ul>
-                
+
             </div>
         </div>
-
-
 
         <main>
             @yield('content')
@@ -168,7 +172,7 @@
         var swiper = new Swiper('.swiper-container', {
             loop: true, // Allow looping of slides
             autoplay: {
-                delay: 3000, // Slide change delay in ms (3 seconds)
+                delay: 3000,
             },
             pagination: {
                 el: '.swiper-pagination',
@@ -183,33 +187,32 @@
 
     <script>
         // Get the mobile menu and the button to toggle visibility
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
 
-// Toggle the mobile menu visibility
-mobileMenuButton.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevents the click event from bubbling up to the document
-    const isOpen = mobileMenu.classList.contains('translate-x-0');
-    
-    if (isOpen) {
-        // Close the mobile menu
-        mobileMenu.classList.remove('translate-x-0');
-        mobileMenu.classList.add('-translate-x-full');
-    } else {
-        // Open the mobile menu
-        mobileMenu.classList.remove('-translate-x-full');
-        mobileMenu.classList.add('translate-x-0');
-    }
-});
+        // Toggle the mobile menu visibility
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents the click event from bubbling up to the document
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
 
-// Close the mobile menu when clicking outside of it
-document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-        mobileMenu.classList.remove('translate-x-0');
-        mobileMenu.classList.add('-translate-x-full');
-    }
-});
+            if (isOpen) {
+                // Close the mobile menu
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('-translate-x-full');
+            } else {
+                // Open the mobile menu
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+            }
+        });
 
+        // Close the mobile menu when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('-translate-x-full');
+            }
+        });
     </script>
 </body>
 
