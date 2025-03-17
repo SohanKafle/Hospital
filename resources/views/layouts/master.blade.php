@@ -143,7 +143,8 @@
         <div id="mobile-menu" class="fixed z-50 transform -translate-x-full transition-transform duration-300">
             <div class="bg-secondary p-4 w-64 h-full font-medium">
                 <ul class="space-y-4">
-                    <li><a href="/" class="block hover:text-primary border-b border-gray-300 pb-2">Home</a></li>
+                    <li><a href="/" class="block hover:text-primary border-b border-gray-300 pb-2">Home</a>
+                    </li>
                     <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">About Us</a>
                     </li>
                     <li><a href="#" class="block hover:text-primary border-b border-gray-300 pb-2">Doctors</a>
